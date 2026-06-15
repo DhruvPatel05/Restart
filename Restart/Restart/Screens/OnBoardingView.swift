@@ -12,7 +12,9 @@ struct OnBoardingView: View {
     
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     @State private var buttonWidth: Double  = UIScreen.main.bounds.width - 80
+    
     @State private var buttonOffset:CGFloat = 0
+    @State private var isAnimating: Bool = false
     
     var body: some View {
         ZStack {
@@ -36,7 +38,9 @@ It's not how much we give but how much love we put into giving.
                     .padding(.horizontal,10)
                     
                 } // MARK: - Header
-                
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y:isAnimating ? 0 : -40)
+                .animation(.easeOut(duration: 1 ), value: isAnimating)
                 
                 // MARK: - Center
                 ZStack {//: ZSTACK
@@ -44,7 +48,9 @@ It's not how much we give but how much love we put into giving.
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
-                }
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 0.5),value: isAnimating)
+                }//: CENTER
                 Spacer()
                 // MARK: - Footer
                 ZStack {
@@ -110,8 +116,15 @@ It's not how much we give but how much love we put into giving.
                 }//: FOOTER
                 .frame(height: 80,alignment: .center)
                 .padding()
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y:isAnimating ? 0 : 40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
             }//: VStack
         }//: ZStack
+        .onAppear(perform: {
+            isAnimating = true
+        })
+        
     }
 }
 struct OnBoardingView_Previews: PreviewProvider {
