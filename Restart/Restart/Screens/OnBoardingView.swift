@@ -90,6 +90,9 @@ It's not how much we give but how much love we put into giving.
                         }
                         .foregroundColor(.white)
                         .frame(width: 80,height: 80,alignment: .center)
+                        .onTapGesture {
+                            isOnboardingViewActive = false
+                        }
                         Spacer()
                     }//: HSTACK
                 }//: FOOTER
