@@ -17,10 +17,13 @@ struct HomeView: View {
         VStack(spacing:20) {
             // MARK: - HEADER
             Spacer()
-            Image("character-2")
-                .resizable()
-                .scaledToFit()
-                .padding()
+            ZStack {
+                CircleGroupVIew(shapeColor: .gray, shapeOpacity: 0.1)
+                Image("character-2")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+            }
             
             // MARK: - CENTER
             
