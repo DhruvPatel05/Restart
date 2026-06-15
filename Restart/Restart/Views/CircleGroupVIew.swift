@@ -10,17 +10,18 @@ import SwiftUI
 struct CircleGroupVIew: View {
     
     // MARK: - PROPERTY
-    
+    @State var shapeColor: Color
+    @State var shapeOpacity: Double
     
     
     // MARK: - BODY
     var body: some View {
         ZStack {
             Circle()
-                .stroke(.white.opacity(0.2),lineWidth: 40)
+                .stroke(shapeColor.opacity(shapeOpacity),lineWidth: 40)
                 .frame(width: 260,height: 260,alignment: .center)
             Circle()
-                .stroke(.white.opacity(0.2),lineWidth: 80)
+                .stroke(shapeColor.opacity(shapeOpacity),lineWidth: 80)
                 .frame(width: 260,height: 260,alignment: .center)
         }
     }
@@ -31,7 +32,7 @@ struct CircleGroupVIew_Previews: PreviewProvider {
         ZStack {
             Color("ColorBlue")
                 .ignoresSafeArea(.all,edges:.all)
-            CircleGroupVIew()
+            CircleGroupVIew(shapeColor: .white, shapeOpacity: 0.2)
 
         }
     }
