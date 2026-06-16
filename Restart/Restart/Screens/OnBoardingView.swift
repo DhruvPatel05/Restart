@@ -15,6 +15,7 @@ struct OnBoardingView: View {
     
     @State private var buttonOffset:CGFloat = 0
     @State private var isAnimating: Bool = false
+    @State private var imageOffset: CGSize = CGSize(width: 0, height: 0)
     
     var body: some View {
         ZStack {
@@ -45,11 +46,30 @@ It's not how much we give but how much love we put into giving.
                 // MARK: - Center
                 ZStack {//: ZSTACK
                     CircleGroupVIew(shapeColor: .white, shapeOpacity: 0.2)
+                        .offset(x:imageOffset.width * -1)
+                        .blur(radius: abs(imageOffset.width/5))
+                        .animation(.easeOut(duration:1), value:imageOffset)
                     Image("character-1")
                         .resizable()
                         .scaledToFit()
                         .opacity(isAnimating ? 1 : 0)
                         .animation(.easeOut(duration: 0.5),value: isAnimating)
+                        .offset(x:imageOffset.width * 1.2, y:0)
+                        .rotationEffect(.degrees(Double(imageOffset.width/20)))
+                        .gesture(
+                            DragGesture()
+                                .onChanged {
+                                    gesture in
+                                    if abs(imageOffset.width) <= 150 {
+                                        imageOffset = gesture.translation
+                                    }
+                                }
+                                .onEnded { _ in
+                                    imageOffset = .zero
+                                    
+                                }
+                        )//: Gesture
+                        .animation(.easeOut(duration: 1), value: imageOffset)
                 }//: CENTER
                 Spacer()
                 // MARK: - Footer
