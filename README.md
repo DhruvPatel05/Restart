@@ -30,7 +30,7 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 </p>
 
 ## Demo Video
-ScreenShots/demo.mp4
+[Watch Demo Video](ScreenShots/DemoVideo.MP4)
 
 ## Tech Stack
 
