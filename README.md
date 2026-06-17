@@ -23,10 +23,10 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 ## Screenshots
 
 <p align="center">
-  <img src="Screenshots/IMG_7991.PNG" width="220">
-  <img src="Screenshots/IMG_7992.PNG" width="220">
-  <img src="Screenshots/IMG_7993.PNG" width="220">
-  <img src="Screenshots/IMG_7994.PNG" width="220">
+  <img src="ScreenShots/IMG_7991.PNG" width="220">
+  <img src="ScreenShots/IMG_7992.PNG" width="220">
+  <img src="ScreenShots/IMG_7993.PNG" width="220">
+  <img src="ScreenShots/IMG_7994.PNG" width="220">
 </p>
 
 ## Tech Stack
