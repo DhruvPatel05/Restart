@@ -19,6 +19,7 @@ struct OnBoardingView: View {
     @State private var indicatorOpacity: Double = 1.0
     @State private var txtTitle: String = "Share."
     
+    let hapticFeedback = UINotificationFeedbackGenerator()
     
     var body: some View {
         ZStack {
@@ -33,6 +34,7 @@ struct OnBoardingView: View {
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
                         .transition(.opacity)
+                        .id(txtTitle)
                     
                     Text("""
 It's not how much we give but how much love we put into giving.
@@ -144,11 +146,14 @@ It's not how much we give but how much love we put into giving.
                                     }
                                 }
                                 .onEnded { _ in
-                                    withAnimation(Animation.easeOut(duration: 0.3)) {
+                                    withAnimation(Animation.easeOut(duration: 0.4)) {
                                         if buttonOffset > buttonWidth / 2 {
+                                            hapticFeedback.notificationOccurred(.success)
+                                            playSound(file: "chimeup", type: "mp3")
                                                 buttonOffset = buttonWidth - 80
                                             isOnboardingViewActive = false
                                         } else {
+                                            hapticFeedback.notificationOccurred(.warning)
                                             buttonOffset = 0
                                         }
                                     }
@@ -170,7 +175,7 @@ It's not how much we give but how much love we put into giving.
         .onAppear(perform: {
             isAnimating = true
         })
-        
+        .preferredColorScheme(.dark)
     }
 }
 struct OnBoardingView_Previews: PreviewProvider {
