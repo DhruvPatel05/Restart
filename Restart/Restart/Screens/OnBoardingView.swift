@@ -15,7 +15,10 @@ struct OnBoardingView: View {
     
     @State private var buttonOffset:CGFloat = 0
     @State private var isAnimating: Bool = false
-    @State private var imageOffset: CGSize = CGSize(width: 0, height: 0)
+    @State private var imageOffset: CGSize = .zero
+    @State private var indicatorOpacity: Double = 1.0
+    @State private var txtTitle: String = "Share."
+    
     
     var body: some View {
         ZStack {
@@ -25,10 +28,12 @@ struct OnBoardingView: View {
             VStack (spacing: 20){
                 Spacer()
                 VStack(spacing: 0) {
-                    Text("Share.")
+                    Text(txtTitle)
                         .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .transition(.opacity)
+                    
                     Text("""
 It's not how much we give but how much love we put into giving.
 """)
@@ -62,15 +67,34 @@ It's not how much we give but how much love we put into giving.
                                     gesture in
                                     if abs(imageOffset.width) <= 150 {
                                         imageOffset = gesture.translation
+                                        withAnimation(.linear(duration: 0.25)) {
+                                            indicatorOpacity = 0
+                                            txtTitle = "Give."
+                                        }
                                     }
                                 }
                                 .onEnded { _ in
                                     imageOffset = .zero
+                                    withAnimation(.linear(duration: 0.25)) {
+                                        indicatorOpacity = 1
+                                        txtTitle = "Share."
+
+                                    }
                                     
                                 }
                         )//: Gesture
                         .animation(.easeOut(duration: 1), value: imageOffset)
                 }//: CENTER
+                .overlay(
+                    Image(systemName: "arrow.left.and.right.circle")
+                        .font(.system(size:44,weight: .ultraLight))
+                        .foregroundColor(.white)
+                        .offset(y:20)
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 1).delay(2), value:isAnimating)
+                        .opacity(indicatorOpacity)
+                    , alignment: .bottom
+                )
                 Spacer()
                 // MARK: - Footer
                 ZStack {
