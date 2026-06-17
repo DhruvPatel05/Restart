@@ -1,3 +1,9 @@
+
+
+https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
+
+
+
 # Restart
 
 Restart is a SwiftUI iOS app focused on motivation, calmness, and self-improvement.  
@@ -30,7 +36,7 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 </p>
 
 ## Demo Video
-[Watch Demo Video](ScreenShots/DemoVideo.MP4)
+https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
 
 ## Tech Stack
 
