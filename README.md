@@ -6,9 +6,9 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 ## App Preview
 
 <p align="center">
-  <img src="Restart/Assets.xcassets/preview-1.imageset/preview-1.png" width="220">
-  <img src="Restart/Assets.xcassets/preview-2.imageset/preview-2.png" width="220">
-  <img src="Restart/Assets.xcassets/preview-3.imageset/preview-3.png" width="220">
+  <img src="Restart/Restart/Assets.xcassets/preview-1.imageset/preview-1.png" width="220">
+  <img src="Restart/Restart/Assets.xcassets/preview-2.imageset/preview-2.png" width="220">
+  <img src="Restart/Restart/Assets.xcassets/preview-3.imageset/preview-3.png" width="220">
 </p>
 
 ## Features
@@ -28,6 +28,9 @@ The app uses a smooth onboarding experience with custom illustrations, animation
   <img src="ScreenShots/IMG_7993.PNG" width="220">
   <img src="ScreenShots/IMG_7994.PNG" width="220">
 </p>
+
+## Demo Video
+ScreenShots/demo.mp4
 
 ## Tech Stack
 
