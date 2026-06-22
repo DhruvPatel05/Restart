@@ -29,7 +29,7 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 <p align="center">
   <img src="ScreenShots/IMG_7991.PNG" width="220">
@@ -40,7 +40,7 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 
 ---
 
-## Demo Video
+## 🎥 Demo Video
 
 https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
 
@@ -55,7 +55,7 @@ https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
 
 ---
 
-## What I Learned
+## 📚 What I Learned
 
 While building Restart, I learned how to create a smooth onboarding experience using SwiftUI.
 
@@ -78,14 +78,14 @@ Restart
 
 ---
 
-## Repository
+## 📂 Repository
 
 GitHub Repo:  
 https://github.com/DhruvPatel05/Restart
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 Dhruv Patel
 
