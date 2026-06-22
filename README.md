@@ -48,3 +48,18 @@ Restart
 ├── Components
 ├── Assets
 └── README.md
+
+---
+
+## 👨‍💻 Author
+
+Dhruv Patel
+
+- GitHub: https://github.com/DhruvPatel05
+- LinkedIn: https://www.linkedin.com/in/dhruv-patel-csm/
+
+---
+
+## ⭐ Support
+
+If you like this project, please consider giving it a star ⭐
