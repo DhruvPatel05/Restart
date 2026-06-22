@@ -1,7 +1,10 @@
 # Restart
 
-Restart is a SwiftUI iOS app focused on motivation, calmness, and self-improvement.  
-The app uses a smooth onboarding experience with custom illustrations, animations, and a clean modern UI.
+Restart is a SwiftUI iOS app focused on motivation, calmness, and self-improvement.
+
+The app uses a smooth onboarding experience with custom illustrations, animations, and a clean modern UI. It is designed as a beginner-friendly SwiftUI project to practice onboarding screens, drag interactions, animations, and clean app structure.
+
+---
 
 ## App Preview
 
@@ -11,6 +14,8 @@ The app uses a smooth onboarding experience with custom illustrations, animation
   <img src="Restart/Restart/Assets.xcassets/preview-3.imageset/preview-3.png" width="220">
 </p>
 
+---
+
 ## Features
 
 - Beautiful SwiftUI onboarding screen
@@ -19,6 +24,10 @@ The app uses a smooth onboarding experience with custom illustrations, animation
 - Smooth UI animations
 - Restart screen after completing onboarding
 - Clean and beginner-friendly SwiftUI project structure
+- Custom illustrations and assets
+- Simple, calm, and modern user experience
+
+---
 
 ## Screenshots
 
@@ -29,8 +38,13 @@ The app uses a smooth onboarding experience with custom illustrations, animation
   <img src="ScreenShots/IMG_7994.PNG" width="220">
 </p>
 
+---
+
 ## Demo Video
+
 https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
+
+---
 
 ## Tech Stack
 
@@ -38,6 +52,18 @@ https://github.com/user-attachments/assets/e2a40fb2-a2c1-4e17-bb22-d355aa864604
 - SwiftUI
 - Xcode
 - iOS
+
+---
+
+## What I Learned
+
+While building Restart, I learned how to create a smooth onboarding experience using SwiftUI.
+
+This project helped me practice animations, custom UI components, drag gestures, image assets, and clean screen transitions.
+
+I also learned how small design details like colors, spacing, icons, illustrations, and movement can make an app feel more polished and user-friendly.
+
+---
 
 ## Project Structure
 
@@ -48,18 +74,29 @@ Restart
 ├── Components
 ├── Assets
 └── README.md
+```
 
 ---
 
-## 👨‍💻 Author
+## Repository
+
+GitHub Repo:  
+https://github.com/DhruvPatel05/Restart
+
+---
+
+## Author
 
 Dhruv Patel
 
-- GitHub: https://github.com/DhruvPatel05
-- LinkedIn: https://www.linkedin.com/in/dhruv-patel-csm/
+LinkedIn:  
+https://www.linkedin.com/in/dhruv-patel-csm/
+
+GitHub:  
+https://github.com/DhruvPatel05
 
 ---
 
-## ⭐ Support
+## Support
 
 If you like this project, please consider giving it a star ⭐
